@@ -304,3 +304,19 @@ describe('extras.getChapters()', () => {
     });
   });
 });
+
+describe('extras.getIsMembersOnly', () => {
+  it('Returns false on a normal video', () => {
+    const info = infoFromWatchJSON('regular');
+    const isMembersOnly = extras.getIsMembersOnly(info);
+
+    assert.strictEqual(isMembersOnly, false);
+  });
+
+  it('Returns true on a members only video', () => {
+    const info = infoFromWatchJSON('members-only');
+    const isMembersOnly = extras.getIsMembersOnly(info);
+
+    assert.strictEqual(isMembersOnly, true);
+  });
+})

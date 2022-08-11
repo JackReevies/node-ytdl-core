@@ -6,6 +6,28 @@
 
 Yet another YouTube downloading module. Written with only Javascript and a node-friendly streaming interface.
 
+# Improvements
+
+## Community age restricted videos
+
+Making requests with `&bpctr=9999999999&has_verified=1` bypasses the confirmation screen you'd see on the web browser version where a video has been age restricted due from the community. The original module by fent results in a 410 Gone unrecoverable error.
+
+## Extended information on getInfo error
+
+Giving more specific error reasons if a video can't be played, for example:
+
++ This video isn't available any more
++ This video has been removed by the upload
++ uploader has closed their Youtube account
++ The account associated with this video has been closed
++ Video is not contains content from X group who have blocked it on copyright grounds
++ Become a member of this channel to see memberss-only content like this video
++ This video has been deleted for violating community guidelines
+
+## isMembersOnly property on video details
+
+Videos that are members-only viewable can sometimes be blocked completely (resulting in an error) or have their info fetchable but unable to download any itags. This flag indicates that the video is members-only and may only be downloaded if the logged in user is a member.
+
 # Support
 You can contact us for support on our [chat server](https://discord.gg/V3vSCs7)
 
