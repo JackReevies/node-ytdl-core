@@ -6,7 +6,7 @@
     "video",
     "download"
   ],
-  "version": "4.11.5-24060401",
+  "version": "4.11.5-24060402",
   "repository": {
     "type": "git",
     "url": "git://github.com/JackReevies/node-ytdl-core.git"

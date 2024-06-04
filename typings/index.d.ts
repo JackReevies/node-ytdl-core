@@ -1,4 +1,4 @@
-declare module 'ytdl-core' {
+declare module '@spacepumpkin/ytdl-core' {
   import { Readable } from 'stream';
 
   // Utility to trick auto-complete to propose T and still accept string (#1188)
